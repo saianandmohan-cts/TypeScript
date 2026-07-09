@@ -1,0 +1,11 @@
+<app-child [username]="name" (em)="recieve($event)"></app-child>
+{{message}}
+
+
+@for(num of arr; track num){
+  <p [style.color]="isColor ? (num%2==0 ? 'red':'green') : 'black' ">{{num}}</p>
+}
+
+<button (click)="toggleColor()">Toggle </button>
+
+<router-outlet></router-outlet>

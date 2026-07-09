@@ -1,0 +1,10 @@
+{{message}}
+
+Name:<input type="text" [(ngModel)]="name">
+Email:<input type="email" [(ngModel)]="email">
+
+<button (click)="onSubmit()">Submit</button>
+
+<app-child [name]="username" [email]="userEmail"  (mssgData)="recieve($event)"></app-child>
+
+<router-outlet></router-outlet>

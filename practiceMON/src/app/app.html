@@ -1,0 +1,15 @@
+{{interpolation}}
+<br>
+<p [style.color]="'red'">this is property binding</p>
+<br>
+<button (click)="toggleButton()" [disabled]="isDisable">Event Binding</button>
+<br>
+<app-child [username]="name" (em)="recieve($event)"></app-child>
+<br>
+{{message}}
+<br>
+@for(num of arr;track num){
+  <p [style.color]="isColor ? (num%2==0)?'green':'red' : 'black'" >{{num}}</p>
+}
+<button (click)="toggleColor()">Color Even Odd</button>
+<router-outlet></router-outlet>

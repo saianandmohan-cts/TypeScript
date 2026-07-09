@@ -1,0 +1,34 @@
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { Child } from './child/child';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet,Child],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+})
+export class App {
+  protected readonly title = signal('practice3');
+
+  name:string='parent to child'
+
+  mssg!:string;
+
+  arr:number[]=[1,2,3,4,5,6,7,8,9,10]
+
+  isColor:boolean=false
+
+  recieve(msg:string){
+    this.mssg=msg
+  }
+
+  toggleColor(){
+    this.isColor=!this.isColor
+  }
+
+
+
+
+
+}
